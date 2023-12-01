@@ -1,0 +1,288 @@
+/*-----------------
+	1. General
+-----------------------*/
+
+:root {
+  --section-bg: #f7e6de;
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --bebas-neue: "Bebas Neue", sans-serif;
+  --light-green: #8fcfb8;
+  --dark-blue: #223464;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/assets/fonts/Source_San_Pro/SourceSans3-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(/assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf) format("truetype");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* color: #000; */
+  background: #fff;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--button-common);
+  text-decoration: none;
+}
+
+.btn-common:hover,
+.btn-common:focus,
+.btn-common:active {
+  color: #fff;
+  box-shadow: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.left-container,
+.right-container {
+  width: 50%;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.left-hero img {
+  width: 100%;
+}
+
+.content {
+  padding: 20px 40px;
+  background: var(--light-green);
+}
+
+.content .title {
+  font-size: 36px;
+  line-height: normal;
+  color: #fefefe;
+  font-weight: 700;
+  font-family: var(--source-sans-pro);
+}
+
+.content .subtitle {
+  font-size: 24px;
+  line-height: normal;
+  color: #fefefe;
+  font-weight: 200;
+  font-family: var(--montserrat);
+}
+
+.bullets-main-container {
+  padding: 20px 40px 20px 40px;
+  background: var(--dark-blue);
+}
+
+.bullets-main-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bullet p {
+  font-size: 18px;
+  line-height: normal;
+  color: #fefefe;
+  font-weight: 500;
+  font-family: var(--montserrat);
+  margin-bottom: 10px;
+}
+
+.icon-container img {
+  max-width: 60px;
+}
+
+.bullet {
+  padding-top: 5px;
+}
+
+.right-main {
+  padding: 80px 30px 0 30px;
+}
+
+.right-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right-content .small {
+  font-size: 80px;
+  line-height: normal;
+  color: var(--light-green);
+  font-family: var(--bebas-neue);
+}
+
+.right-content .medium {
+  font-size: 100px;
+  line-height: normal;
+  color: var(--dark-blue);
+  font-family: var(--bebas-neue);
+}
+
+.right-content .large {
+  font-size: 120px;
+  line-height: normal;
+  color: var(--light-green);
+  font-family: var(--bebas-neue);
+}
+
+.right-hero-images-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-hero-1 img,
+.right-hero-2 img {
+  width: 100%;
+  height: 430px;
+}
+
+.right-container {
+  position: relative;
+  z-index: 111;
+}
+
+.right-container::after {
+  content: "";
+  height: 200px;
+  display: block;
+  width: 85%;
+  background: var(--light-green);
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.right-hero-images-container img {
+  width: 80% !important;
+}
+
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 45px 20px 45px;
+  background: var(--dark-blue);
+  gap: 10px;
+}
+
+.contact-us-container a {
+  color: #fefefe;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-us-container p {
+  font-size: 18px;
+  color: var(--light-green);
+  font-family: var(--montserrat);
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 1820px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+  }
+
+  .content .title {
+    font-size: 20px;
+  }
+  .content .subtitle {
+    font-size: 18px;
+  }
+
+  .bullet p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .right-content .small {
+    font-size: 50px;
+  }
+
+  .right-content .medium {
+    font-size: 70px;
+  }
+
+  .right-content .large {
+    font-size: 98px;
+  }
+
+  .right-container::after,
+  .right-hero-images-container img {
+    width: 100% !important;
+  }
+
+  .right-content {
+    align-items: center;
+  }
+
+  .bullets-main-container {
+    padding: 30px 40px 30px 40px;
+    background: var(--dark-blue);
+  }
+}
