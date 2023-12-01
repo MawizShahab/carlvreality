@@ -227,6 +227,15 @@ img {
   font-family: var(--montserrat);
 }
 
+.terms-and-conditions {
+  text-align: center;
+  padding: 10px;
+  color: #fefefe;
+  text-decoration: none;
+  background: var(--dark-blue);
+  font-size: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .main {
     max-width: 1820px;
